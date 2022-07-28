@@ -1,0 +1,35 @@
+
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
+<div class="card mx-auto mt-5 w-50">
+  <div class="card-header">
+    New Event
+  </div>
+  <%= form_with model: @event do |form| %>
+    <div class="card-body">
+      <div class="mb-1">
+        <%= form.label :title, "Title:", class: "form-label" %>
+        <%= form.text_field :title, class: "form-control" %>
+      </div>
+      <div class="mb-3">
+        <%= form.label :description, class: "form-label"%>
+        <%= form.text_area :description, class: "form-control", size: "70x5", placeholder: "Describe your event here..." %>
+      </div>
+      <div class="mb-3">
+        <%= form.label :location, class: "form-label"%>
+        <%= form.text_field :location, class: "form-control" %>
+      </div>
+      <div class="mb-3">
+        <%= form.label :date, class: "form-label"%>
+        <%= form.date_field :date, class: "form-control" %>
+      </div>
+      <div class="d-grid gap-2">
+      <%= form.submit "Post", class: "btn btn-primary"%>
+      </div>
+    </div>
+  <% end %>
+</div>

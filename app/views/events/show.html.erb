@@ -1,0 +1,7 @@
+
+<%= @event.title %><br>
+<%= @event.description %><br>
+<%= @event.location %><br>
+<%= @event.date %><br>
+<%= link_to "Back", root_path %><br>
+<%= button_to "Attend this event", attendance_path, method: :post, class: "text-success" %>

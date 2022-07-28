@@ -1,0 +1,13 @@
+
+<h1>Get to an event!</h1>
+
+<% if @events.any? %>
+  <% @events.each do |event| %>
+    <%= link_to event.title, event %><br>
+    <%= event.description %><br>
+    <%= event.location %><br>
+    <%= event.date %><br>
+  <% end %>
+<% else %>
+  <div>There are no events yet!</div>
+<% end %>

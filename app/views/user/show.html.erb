@@ -1,0 +1,13 @@
+
+<h1><%= current_user.email %>'s Events</h1>
+
+<% if current_user.events.any? %>
+  <% current_user.events.each do |event| %>
+    <%= event.title %><br>
+    <%= event.description %><br>
+    <%= event.location %><br>
+    <%= event.date %><br>
+  <% end %>
+<% else %>
+  <div>This user has no events!</div>
+<% end %>
