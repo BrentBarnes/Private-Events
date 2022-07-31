@@ -11,6 +11,4 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :events, only: [:index, :show, :new, :create, :delete]
   resources :attendances
-  post '/attendances/:attendee_id', to: "attendances#create", as: "create_attending_event"
-
 end

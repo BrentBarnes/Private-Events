@@ -1,7 +1,14 @@
-
+<h1>Event:</h1>
 <%= @event.title %><br>
 <%= @event.description %><br>
 <%= @event.location %><br>
 <%= @event.date %><br>
 <%= link_to "Back", root_path %><br>
-<%= button_to "Attend this event", attendance_path, method: :post, class: "text-success" %>
+<%= button_to "Attend this event", attendances_path(attendance: { attended_event_id: @event.id, attendee_id: current_user.id }) %>
+<br>
+<h1>Attending this event</h1>
+<% if @event.attendances.any? %>
+  <% @event.attendances.each do |attendance| %>
+    <%= attendance.attendee.email %><br>
+  <% end %>
+<% end %>

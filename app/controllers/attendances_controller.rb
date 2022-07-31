@@ -7,13 +7,13 @@ class AttendancesController < ApplicationController
     @attendance = current_user.attendances
   end
 
-  # def index
-  #   @attendance = current_user.attendances
-  # end
+  def index
+    @attendance = current_user.attendances
+  end
 
   def create
-    @event = Event.find(attendance_params)
-    @event.attendees << current_user
+    @attendance = Attendance.create(attendance_params)
+    @attendance.save
     flash[:notice] = "You have registered for the event."
     redirect_to root_path
   end
