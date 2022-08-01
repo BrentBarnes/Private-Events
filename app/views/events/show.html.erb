@@ -4,11 +4,16 @@
 <%= @event.location %><br>
 <%= @event.date %><br>
 <%= link_to "Back", root_path %><br>
-<%= button_to "Attend this event", attendances_path(attendance: { attended_event_id: @event.id, attendee_id: current_user.id }) %>
+<% if current_user && @event.creator != current_user && !@event.attendees.include?(current_user) %>
+  <%= button_to "Attend this event", attendances_path(attendance: { attended_event_id: @event.id, attendee_id: current_user.id }) %>
+<% else %>
+  <div>You have registered for this event.</div>
+<% end %>
 <br>
+
 <h1>Attending this event</h1>
-<% if @event.attendances.any? %>
-  <% @event.attendances.each do |attendance| %>
-    <%= attendance.attendee.email %><br>
+<% if @event.attendees.any? %>
+  <% @event.attendees.each do |attendee| %>
+    <%= attendee.email %><br>
   <% end %>
 <% end %>

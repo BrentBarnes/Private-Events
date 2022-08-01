@@ -14,8 +14,15 @@ class AttendancesController < ApplicationController
   def create
     @attendance = Attendance.create(attendance_params)
     @attendance.save
-    flash[:notice] = "You have registered for the event."
+    flash[:notice] = "You have successfully registered for the event."
     redirect_to root_path
+  end
+
+  def destroy
+    @attendance = Attendance.find_by(attended_event_id: params[:id]).destroy
+    
+    flash[:notice] = "You have successfully withdrew from this event."
+    redirect_to attendances_path
   end
 
 

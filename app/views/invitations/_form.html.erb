@@ -1,0 +1,15 @@
+
+<%= form_with model: @invitation do |form| %>
+    <div class="card-body">
+      <div class="mb-3">
+        <%= form.label :invitation, class: "form-label"%>
+        <%= form.email_field :email, class: "form-control" %>
+      </div>
+      <div class="d-grid gap-2 mb-3">
+        <%= button_to "Send invitation", invitations_path(params[:invited_event_id]), method: :post, class: "btn btn-primary"%>
+      </div>
+      <div class="d-grid gap-2">
+        <%= link_to "Back to your events", user_show_path, class: "btn btn-primary"%>
+      </div>
+    </div>
+  <% end %>

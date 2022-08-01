@@ -1,18 +1,8 @@
-<% flash.each do |type, msg| %>
-  <div>
-    <%= msg %>
-  </div>
-<% end %>
 
-<h1>Events You're Attending!</h1>
+<h1 class="mt-5 mx-5">Events You're Attending!</h1>
 
-<% if @attendance.any? %>
-  <% @attendance.each do |event| %>
-    <%= link_to event.attended_event.title, event %><br>
-    <%= event.attended_event.description %><br>
-    <%= event.attended_event.location %><br>
-    <%= event.attended_event.date %><br>
-  <% end %>
-<% else %>
+<%= render "event_index" %>
+
+<% if current_user.attended_events.empty? %>
   <div>You're not signed up for any events yet!</div>
 <% end %>

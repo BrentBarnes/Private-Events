@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'invitations/new'
+  get 'invitations/create'
   get 'user/show'
   get 'events/index'
   get 'events/new'
@@ -9,6 +11,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :users, only: [:show]
-  resources :events, only: [:index, :show, :new, :create, :delete]
+  resources :events
   resources :attendances
+  resources :invitations
 end

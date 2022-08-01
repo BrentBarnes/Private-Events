@@ -1,0 +1,8 @@
+
+<div class="mb-3 w-50">
+  <%= link_to event.title, event %><br>
+  <%= event.description %><br>
+  <%= event.location %><br>
+  <%= event.date %><br>
+  <%= button_to "Delete", attendance_path(event), method: :delete, class: "text-danger"%>
+</div>

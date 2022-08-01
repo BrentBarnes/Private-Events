@@ -1,0 +1,16 @@
+
+<div class="d-flex justify-content-between m-5">
+  <div class="w-50">
+    <h2>Future Events</h2>
+      <% Event.future_events.each do |event| %>
+        <%= render  partial: "event", locals: {event: event} %>
+      <% end %>
+  </div>
+
+  <div class="w-50">
+    <h2>Past Events</h2>
+      <% Event.past_events.each do |event| %>
+        <%= render partial: "event", locals: {event: event} %>
+      <% end %>
+  </div>
+</div>
