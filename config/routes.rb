@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'invitations/new'
-  get 'invitations/create'
   get 'user/show'
   get 'events/index'
   get 'events/new'

@@ -1,19 +1,6 @@
 
 <%= render "layouts/flash" %>
 
-<% if @invitation.errors.any? %>
-<div id="error_explanation">
-    <h2><%= pluralize(@invitation.errors.count, "error") %> prohibited this invitation from being sent:</h2>
-
-    <ul>
-      <% @invitation.errors.each do |error| %>
-        <li><%= error.full_message %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
-
-
 <div class="card mx-auto mt-5 w-50">
   <div class="card-header">
     New Invitation
