@@ -30,7 +30,7 @@ The goal of this project was to practice harder types of model associations.
   </figure>
   <figure>
     <figcaption>Events You're Attending</figcaption>
-    <img src="screenshots/attending.png" alt="Event's you're attending" width="600" height="400">
+    <img src="screenshots/attending.png" alt="Event's you're attending" width="600" height="350">
   </figure>
   <figure>
     <figcaption>Event's You're Hosting</figcaption>
@@ -42,7 +42,7 @@ The goal of this project was to practice harder types of model associations.
   </figure>
   <figure>
     <figcaption>Event Model</figcaption>
-    <img src="screenshots/event_model.png" alt="Event Model" width="600" height="300">
+    <img src="screenshots/event_model.png" alt="Event Model" width="600" height="400">
   </figure>
   <figure>
     <figcaption>Invitation Model</figcaption>
