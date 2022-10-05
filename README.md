@@ -30,11 +30,11 @@ The goal of this project was to practice harder types of model associations.
   </figure>
   <figure>
     <figcaption>Events You're Attending</figcaption>
-    <img src="screenshots/attending.png" alt="Event's you're attending" width="600" height="300">
+    <img src="screenshots/attending.png" alt="Event's you're attending" width="450" height="300">
   </figure>
   <figure>
     <figcaption>Event's You're Hosting</figcaption>
-    <img src="screenshots/hosting.png" alt="Events You're Hosting" width="600" height="300">
+    <img src="screenshots/hosting.png" alt="Events You're Hosting" width="500" height="300">
   </figure>
   <figure>
     <figcaption>User Model</figcaption>
@@ -42,14 +42,14 @@ The goal of this project was to practice harder types of model associations.
   </figure>
   <figure>
     <figcaption>Event Model</figcaption>
-    <img src="screenshots/event_model.png" alt="Event Model" width="600" height="300">
+    <img src="screenshots/event_model.png" alt="Event Model" width="450" height="300">
   </figure>
   <figure>
     <figcaption>Invitation Model</figcaption>
-    <img src="screenshots/invitation_model.png" alt="Invitation Model" width="600" height="300">
+    <img src="screenshots/invitation_model.png" alt="Invitation Model" width="550" height="300">
   </figure>
   <figure>
     <figcaption>Attendance Model</figcaption>
-    <img src="screenshots/attendance.png" alt="Attendance Model" width="600" height="300">
+    <img src="screenshots/attendance.png" alt="Attendance Model" width="400" height="300">
   </figure>
 </p>
