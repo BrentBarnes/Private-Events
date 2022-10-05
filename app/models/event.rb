@@ -6,9 +6,6 @@ class Event < ApplicationRecord
 
   has_many :invitations, foreign_key: "invited_event_id"
   has_many :invited_users, through: :invitations
-
-
-
   
   validates :title, presence: true
   validates :description, presence: true

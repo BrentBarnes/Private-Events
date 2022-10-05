@@ -6,8 +6,10 @@
 <%= link_to "Back", root_path %><br>
 <% if current_user && @event.creator != current_user && !@event.attendees.include?(current_user) && @event.invited_users.include?(current_user) %>
   <%= button_to "Attend this event", attendances_path(attendance: { attended_event_id: @event.id, attendee_id: current_user.id }) %>
+<% elsif @event.creator == current_user %>
+  <div class="text-success">This is your event!</div>
 <% elsif !@event.invited_users.include?(current_user) %>
-<div class="text-warning">You have not been invited to this event</div>
+  <div class="text-warning">You have not been invited to this event</div>
 <% else %>
   <div class="text-success">You have registered for this event.</div>
 <% end %>
